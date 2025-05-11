@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scuba Diving Tours</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#tours">Our Tours</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <video id="background-video" autoplay muted loop>
+        <source src="/media/scuba.mp4" type="video/mp4">
+        Your browser does not support the video feature.
+    </video>
+
+    <header class="hero">
+        <h1>Welcome to Scuba Diving Adventures</h1>
+        <p>Explore the underwater world with us!</p>
+        <button id="book-now">Book Now</button>
+    </header>
+
+    <section id="about" class="view">
+        <h2>About Us</h2>
+        <p>We offer the best scuba diving experience for all skill levels. Our team of certified instructors will guide you through the beautiful underwater landscapes, ensuring a safe and enjoyable experience.</p>
+        <p>Whether you're a beginner or an experienced diver, we have the perfect tour for you. Our state-of-the-art equipment and knowledgeable staff will make your diving adventure unforgettable.</p>
+        <p>Join us for an adventure of a lifetime!</p>
+    </section>
+
+    <section id="tours" class="view">
+        <h2>Our Tours</h2>
+        <div class="tabs">
+            <div class="tabs-inner">
+                <button class="tab-button" data-tab="reef-diving">Reef Diving</button>
+                <button class="tab-button" data-tab="night-diving">Night Diving</button>
+                <button class="tab-button" data-tab="drift-diving">Drift Diving</button>
+                <button class="tab-button" data-tab="wreck-diving">Wreck Diving</button>
+                <button class="tab-button" data-tab="cave-diving">Cave Diving</button>
+                <button class="tab-button" data-tab="lionfish-hunting">Lionfish Hunting</button>
+                <button class="tab-button" data-tab="deep-diving">Deep Diving</button>
+                <button class="tab-button" data-tab="nitrox-diving">Nitrox Diving</button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="reef-diving" style="display: block;">
+            <h3>Reef Diving</h3>
+            <div class="gallery">
+                <img src="/media/morena.JPG" alt="Reef Diving 1">
+                <img src="/media/corales.JPG" alt="Reef Diving 2">
+                <img src="/media/pez angel frances.JPG" alt="Reef Diving 3">
+                <img src="/media/pluma.JPG" alt="Reef Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="night-diving" style="display: none;">
+            <h3>Night Diving</h3>
+            <div class="gallery">
+                <img src="/media/vuela.JPG" alt="Night Diving 1">
+                <img src="/media/corales.JPG" alt="Night Diving 2">
+                <img src="/media/pez angel frances.JPG" alt="Night Diving 3">
+                <img src="/media/morena.JPG" alt="Night Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="drift-diving" style="display: none;">
+            <h3>Drift Diving</h3>
+            <div class="gallery">
+                <img src="/media/pluma.JPG" alt="Drift Diving 1">
+                <img src="/media/vuela.JPG" alt="Drift Diving 2">
+                <img src="/media/corales.JPG" alt="Drift Diving 3">
+                <img src="/media/pez angel frances.JPG" alt="Drift Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="wreck-diving" style="display: none;">
+            <h3>Wreck Diving</h3>
+            <div class="gallery">
+                <img src="/media/morena.JPG" alt="Wreck Diving 1">
+                <img src="/media/pluma.JPG" alt="Wreck Diving 2">
+                <img src="/media/vuela.JPG" alt="Wreck Diving 3">
+                <img src="/media/corales.JPG" alt="Wreck Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="cave-diving" style="display: none;">
+            <h3>Cave Diving</h3>
+            <div class="gallery">
+                <img src="/media/WhatsApp Image 2025-05-10 at 3.43.56 PM.jpeg" alt="Cave Diving 1">
+                <img src="/media/WhatsApp Image 2025-05-10 at 3.43.56 PM (1).jpeg" alt="Cave Diving 2">
+                <img src="/media/WhatsApp Image 2025-05-10 at 3.43.56 PM (2).jpeg" alt="Cave Diving 3">
+                <img src="/media/vuela.JPG" alt="Cave Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="lionfish-hunting" style="display: none;">
+            <h3>Lionfish Hunting</h3>
+            <div class="gallery">
+                <img src="/media/corales.JPG" alt="Lionfish Hunting 1">
+                <img src="/media/pez angel frances.JPG" alt="Lionfish Hunting 2">
+                <img src="/media/morena.JPG" alt="Lionfish Hunting 3">
+                <img src="/media/pluma.JPG" alt="Lionfish Hunting 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="deep-diving" style="display: none;">
+            <h3>Deep Diving</h3>
+            <div class="gallery">
+                <img src="/media/vuela.JPG" alt="Deep Diving 1">
+                <img src="/media/corales.JPG" alt="Deep Diving 2">
+                <img src="/media/pez angel frances.JPG" alt="Deep Diving 3">
+                <img src="/media/morena.JPG" alt="Deep Diving 4">
+            </div>
+        </div>
+
+        <div class="tab-content" id="nitrox-diving" style="display: none;">
+            <h3>Nitrox Diving</h3>
+            <div class="gallery">
+                <img src="/media/pluma.JPG" alt="Nitrox Diving 1">
+                <img src="/media/vuela.JPG" alt="Nitrox Diving 2">
+                <img src="/media/corales.JPG" alt="Nitrox Diving 3">
+                <img src="/media/pez angel frances.JPG" alt="Nitrox Diving 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="view">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <img src="/media/pez%20angel%20frances.JPG" alt="Underwater scene">
+            <img src="/media/vuela.JPG" alt="Scuba divers">
+            <img src="/media/corales.JPG" alt="Coral reef">
+        </div>
+    </section>
+
+    <section id="contact" class="view">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <div id="carousel" class="carousel">
+        <span class="close">&times;</span>
+        <div class="carousel-content">
+            <button class="prev">&#10094;</button>
+            <div class="main-image">
+                <img id="carousel-img" src="/media/78.jpg" alt="">
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="thumbnail-container">
+            <div id="thumbnails" class="thumbnails">
+                <img src="/media/78.jpg" alt="Thumbnail 1">
+                <img src="/media/corales.JPG" alt="Thumbnail 2">
+                <img src="/media/morena.JPG" alt="Thumbnail 3">
+                <img src="/media/pez%20angel%20frances.JPG" alt="Thumbnail 4">
+                <img src="/media/pluma.JPG" alt="Thumbnail 5">
+                <img src="/media/vuela.JPG" alt="Thumbnail 6">
+                <img src="/media/WhatsApp%20Image%202025-05-10%20at%203.43.56%20PM%20(1).jpeg" alt="Thumbnail 7">
+                <img src="/media/WhatsApp%20Image%202025-05-10%20at%203.43.56%20PM%20(2).jpeg" alt="Thumbnail 8">
+                <img src="/media/WhatsApp%20Image%202025-05-10%20at%203.43.56%20PM.jpeg" alt="Thumbnail 9">
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/scripts.js"></script>
+</body>
+
+<footer>
+    <p>&copy; 2023 Scuba Diving Adventures. All rights reserved.</p>
+</footer>
+
+</html>
