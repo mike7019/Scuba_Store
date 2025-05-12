@@ -6,26 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             tabContents.forEach(content => content.style.display = 'none');
-            document.getElementById(button.dataset.tab).style.display = 'block';
+            const targetTab = document.getElementById(button.dataset.tab);
+            if (targetTab) {
+                targetTab.style.display = 'block';
+            }
         });
     });
 
     const carousel = document.getElementById('carousel');
-    const section = document.getElementById('tours');
     const carouselImg = document.getElementById('carousel-img');
     const closeCarousel = document.querySelector('.carousel .close');
     const prevCarousel = document.querySelector('.carousel .prev');
     const nextCarousel = document.querySelector('.carousel .next');
     const thumbnailsContainer = document.getElementById('thumbnails');
-    const tabContentsArray = Array.from(document.querySelectorAll('.tab-content'));
     let currentCarouselIndex = 0;
     let currentGalleryImages = [];
 
     function showCarouselImage(index) {
-        currentCarouselIndex = index;
-        carouselImg.src = currentGalleryImages[currentCarouselIndex].src;
-        carousel.style.display = 'flex';
-        updateThumbnails();
+        if (currentGalleryImages[index]) {
+            currentCarouselIndex = index;
+            carouselImg.src = currentGalleryImages[currentCarouselIndex].src;
+            carousel.style.display = 'flex';
+            updateThumbnails();
+        }
     }
 
     function updateThumbnails() {
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const tabContentsArray = Array.from(document.querySelectorAll('.tab-content'));
     tabContentsArray.forEach(tabContent => {
         const galleryImages = Array.from(tabContent.querySelectorAll('.gallery img'));
         galleryImages.forEach((img, index) => {
@@ -54,39 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeCarousel.addEventListener('click', () => {
-        carousel.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling on the main page
-    });
-
-    carousel.addEventListener('click', (event) => {
-        if (event.target === carousel) {
-            carousel.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling on the main page
-        }
-    });
-
-    prevCarousel.addEventListener('click', (event) => {
-        event.stopPropagation();
-        currentCarouselIndex = (currentCarouselIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-        showCarouselImage(currentCarouselIndex);
-    });
-
-    nextCarousel.addEventListener('click', (event) => {
-        event.stopPropagation();
-        currentCarouselIndex = (currentCarouselIndex + 1) % currentGalleryImages.length;
-        showCarouselImage(currentCarouselIndex);
-    });
-
-    const closeButton = document.querySelector(".close");
-
-    if (closeButton) {
-        closeButton.addEventListener("click", () => {
-            carousel.style.display = "none";
-        });
-    }
-
-
     if (closeCarousel) {
         closeCarousel.addEventListener('click', () => {
             carousel.style.display = 'none';
@@ -94,9 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ensure the carousel is hidden initially
-    carousel.style.display = 'none';
+    if (carousel) {
+        carousel.addEventListener('click', (event) => {
+            if (event.target === carousel) {
+                carousel.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling on the main page
+            }
+        });
+    }
 
-    
+    if (prevCarousel) {
+        prevCarousel.addEventListener('click', (event) => {
+            event.stopPropagation();
+            currentCarouselIndex = (currentCarouselIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            showCarouselImage(currentCarouselIndex);
+        });
+    }
+
+    if (nextCarousel) {
+        nextCarousel.addEventListener('click', (event) => {
+            event.stopPropagation();
+            currentCarouselIndex = (currentCarouselIndex + 1) % currentGalleryImages.length;
+            showCarouselImage(currentCarouselIndex);
+        });
+    }
+
+    // Ensure the carousel is hidden initially
+    if (carousel) {
+        carousel.style.display = 'none';
+    }
 });
 
